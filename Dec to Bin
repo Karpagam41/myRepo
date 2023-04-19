@@ -1,0 +1,22 @@
+convert decimal to binary and toggle the digits convert binary to decimal.
+
+input:10->1010
+toggle->"1"->"0"
+        "0"->"1"
+output:5//0101
+
+import java.util.*;
+class Main
+{
+  public static void main(String[] args)
+  {
+        Scanner sc=new Scanner(System.in);
+        int no=sc.nextInt();
+        String bin=Integer.toBinaryString(no);
+        bin=bin.replaceAll("1","2");
+        bin=bin.replaceAll("0","1");
+        bin=bin.replaceAll("2","0");
+        int res=Integer.parseInt(bin,2);
+        System.out.println(res);
+   }
+}
